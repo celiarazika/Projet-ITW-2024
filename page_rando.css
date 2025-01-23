@@ -1,0 +1,11 @@
+@import url("style_commun.css");
+
+.image-reduite {
+    width: 70%; 
+    height: auto; 
+}
+
+.randonnee-info {
+    text-align: justify; 
+}
+

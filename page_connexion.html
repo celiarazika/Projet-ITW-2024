@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="page_connexion.css" type="text/css">
+    <script src="./public/login.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Connexion</h1>
+    </header>
+    <nav>
+        <ul class="barre-de-menu">
+            <li><a href="/">Randonner</a></li>
+            <li><a href="/contribuer">Contribuer</a></li>
+            <li><a href="/connexion" class="actuel">Connexion</a></li>
+            <li><a href="/inscription">Inscription</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form id="connexion-form" method="POST">
+            <p id="login-error" class="error">
+                La connexion a échouée. Veuillez réessayer ultérieurement. Si le
+                problème persiste, merci de contacter l'administrateur du site.
+            </p>
+            <label for="username">Nom d'utilisateur:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <label for="sign-up-checkbox">S'inscrire</label>
+            <input type="checkbox" id="sign-up-checkbox" name="sign-up-checkbox">
+            <br>
+            <input type="submit" value="Soumettre">
+        </form>
+    </main>
+</body>
+
+</html>

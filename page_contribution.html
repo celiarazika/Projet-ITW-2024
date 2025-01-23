@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randonner - Accueil</title>
+    <link rel="stylesheet" href="style_commun.css">
+</head>
+
+<body>
+    <header>
+        <h1>Contribuer</h1>
+    </header>
+    <nav>
+        <ul class="barre-de-menu">
+            <li><a href="/">Randonner</a></li>
+            <li><a href="/contribuer" class="actuel">Contribuer</a></li>
+            <li><a href="/connexion">Connexion</a></li>
+            <li><a href="/inscription">Inscription</a></li>
+        </ul>
+    </nav>
+    <div class="container" style="display: flex; flex-direction: column; align-items: center;">
+        <h2>Contribuer à notre base de données</h2>
+        <form id="randonnee-form" action="/contribuer" method="POST"
+            style="display: flex; flex-direction: column; align-items: center;">
+            <label for="nom">Nom de la randonnée :</label>
+            <input type="text" id="nom" name="nom" required>
+            <br>
+
+            <label for="desc">Description de la randonnée :</label>
+            <textarea id="desc" name="desc" rows="5" required></textarea>
+            <br>
+
+            <label for="adresse">Adresse du point de départ :</label>
+            <input type="text" id="adresse" name="adresse" required>
+            <br>
+
+            <label for="photo">Photo de la randonnée (URL) :</label>
+            <input type="text" id="photo" name="photo" required>
+            <br>
+
+            <input type="submit" value="Soumettre">
+        </form>
+        <script>
+
+        </script>
+    </div>
+</body>
+
+</html>

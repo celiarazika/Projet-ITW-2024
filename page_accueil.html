@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="page_accueil.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <h1>Parcours de randonnées</h1>
+    </header>
+    <nav>
+        <ul class="barre-de-menu">
+            <li><a href="/" class="actuel">Randonner</a></li>
+            <li><a href="/contribuer">Contribuer</a></li>
+            <li><a href="/connexion">Connexion</a></li>
+            <li><a href="/inscription">Inscription</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Liste des randonnées</h2>
+        <script>
+            fetch('/randonnees')
+                .then(response => response.json())
+                .then(data => {
+                    data.sort((a, b) => a.nom.localeCompare(b.nom));
+
+                    const main = document.querySelector('main');
+                    data.forEach(randonnee => {
+                        const a = document.createElement('a');
+                        a.textContent = `${randonnee.nom} - ${randonnee.adresse}`;
+                        a.href = `/randonnees/page/${randonnee.nom}`;
+                        main.appendChild(a);
+                        main.appendChild(document.createElement('br'));
+                    });
+                })
+                .catch(error => console.error('Error:', error));
+        </script>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+@import url("style_commun.css");
+
+main {
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

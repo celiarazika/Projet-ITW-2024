@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="page_connexion.css" type="text/css">
+    <script src="./public/sign-up.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Inscription</h1>
+    </header>
+    <nav>
+        <ul class="barre-de-menu">
+            <li><a href="/">Randonner</a></li>
+            <li><a href="/contribuer">Contribuer</a></li>
+            <li><a href="/connexion">Connexion</a></li>
+            <li><a href="/inscription" class="actuel">Inscription</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form id="connexion-form" method="POST">
+            <p id="sign-up-error" class="error">
+                L'inscription a échouée. Veuillez réessayer ultérieurement. Si le
+                problème persiste, merci de contacter l'administrateur du site.
+            </p>
+            <label for="username">Nom d'utilisateur:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <input type="submit" value="Soumettre">
+        </form>
+    </main>
+</body>
+
+</html>
